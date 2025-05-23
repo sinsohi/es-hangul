@@ -51,6 +51,7 @@ export const 발음변환_첫소리_ㅎ_발음 = {
   ㅈ: 'ㅊ',
   ㄴㅈ: 'ㅊ',
 } as const;
+export const 받침_ㄷ_변환 = ['ㅅ', 'ㅈ', 'ㅊ', 'ㅌ'] as const;
 
 // 9항, 10항, 11항
 export const 받침_대표음_발음 = {

@@ -5,6 +5,7 @@ import {
   발음변환_첫소리_ㅎ,
   발음변환_첫소리_ㅎ_발음,
   음가가_없는_자음,
+  받침_ㄷ_변환,
 } from '../constants';
 import type { Nullable, NullableReturnSyllables, ReturnSyllables, Syllable } from './rules.types';
 import { replace받침ㅎ } from './rules.utils';
@@ -110,5 +111,11 @@ function handleNextChoseongIsㅎ(current: Syllable, next: Nullable<Syllable>): N
       updatedCurrent.jongseong = updatedCurrent.jongseong[0] as Syllable['jongseong'];
     }
   }
+  
+  else if (updatedNext?.choseong == 'ㅎ' && arrayIncludes(받침_ㄷ_변환, updatedCurrent.jongseong)) {
+    updatedNext.choseong = 'ㅌ'
+    updatedCurrent.jongseong = '';
+  }
+  
   return { current: updatedCurrent, next: updatedNext };
 }
