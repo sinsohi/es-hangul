@@ -57,6 +57,24 @@ describe('transform12th', () => {
     });
   });
 
+    it('규정에 따라 "ㄷ"으로 발음되는 "ㅅ, ㅈ, ㅊ, ㅌ"의 경우에도 이에 준한다', () => {
+    const current = defined(disassembleCompleteCharacter('숱'));
+    const next = defined(disassembleCompleteCharacter('하'));
+
+    expect(transform12th(current, next)).toEqual({
+      current: {
+        choseong: 'ㅅ',
+        jungseong: 'ㅜ',
+        jongseong: '',
+      },
+      next: {
+        choseong: 'ㅌ',
+        jungseong: 'ㅏ',
+        jongseong: '',
+      },
+    });
+  });  
+
   it('"ㅎ" 뒤에 "ㄴ"이 결합되는 경우에는 "ㄴ"으로 발음한다', () => {
     const current = defined(disassembleCompleteCharacter('놓'));
     const next = defined(disassembleCompleteCharacter('는'));
