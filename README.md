@@ -57,5 +57,19 @@ docker exec -it <CONTAINER_ID> /bin/bash
     ├── index.js               # 실행 예제 파일
     └── README.md              
 ```
+### 실행을 마치고 종료하는 방법
 
+```bash
+# 1. 컨테이너에서 나가기
+exit
+
+# 2. 컨테이너 중지
+docker stop <CONTAINER_ID>
+
+# 3. 컨테이너 삭제 
+docker rm <CONTAINER_ID>
+
+# 4. 이미지 삭제
+docker rmi final_2023040036:v1
+```
 
