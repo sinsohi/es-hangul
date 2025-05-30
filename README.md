@@ -1,6 +1,7 @@
 # es-hangul Docker Project
 
 ## 🎯Goal
+대학교 오픈소스전문프로젝트 실습 수업에서 진행한 프로젝트입니다.
 
 이 프로젝트는 한국어 텍스트 처리를 위한 [**es-hangul 라이브러리**](https://github.com/toss/es-hangul)를 Docker 환경에서 실행하고, 오픈소스 컨트리뷰션을 통해 **표준 발음법 변환 기능의 버그를 수정**하는 것을 목표로 합니다.
 
