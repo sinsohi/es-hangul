@@ -1,12 +1,12 @@
 # es-hangul Docker Project
 
-## Goal
+## 🎯Goal
 
-이 프로젝트는 한국어 텍스트 처리를 위한 **es-hangul 라이브러리**를 Docker 환경에서 실행하고, 오픈소스 컨트리뷰션을 통해 **표준 발음법 변환 기능의 버그를 수정**하는 것을 목표로 합니다.
+이 프로젝트는 한국어 텍스트 처리를 위한 [**es-hangul 라이브러리**](https://github.com/toss/es-hangul)를 Docker 환경에서 실행하고, 오픈소스 컨트리뷰션을 통해 **표준 발음법 변환 기능의 버그를 수정**하는 것을 목표로 합니다.
 
 구체적으로는 `standardizePronunciation` 함수의 **제12항 [붙임 2] 조항**이 누락된 문제를 해결하여, 받침 'ㅅ, ㅈ, ㅊ, ㅌ'이 뒤 음절 첫소리 'ㅎ'과 결합될 때 올바른 발음 변환이 이루어지도록 개선했습니다.
 
-## Requirements
+## ⚙️Requirements
 
 Docker 환경에서 다음 라이브러리들이 설치됩니다:
 
@@ -15,7 +15,7 @@ Docker 환경에서 다음 라이브러리들이 설치됩니다:
 - **git**: latest
 - **vim**: latest
 
-## How to install & Run
+## 🐳How to install & Run
 
 ### Docker image 다운로드 및 설치하는 방법
 
@@ -72,4 +72,6 @@ docker rm <CONTAINER_ID>
 # 4. 이미지 삭제
 docker rmi final_2023040036:v1
 ```
+## 📜LICENSE
 
+MIT © Viva Republica, Inc. [LICENSE](https://github.com/toss/es-hangul/blob/main/LICENSE) 파일을 참고하세요.
