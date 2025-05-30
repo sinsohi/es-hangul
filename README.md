@@ -26,3 +26,21 @@ docker load -i final_2023040036_v1.tar
 # 2. 이미지가 정상적으로 로드되었는지 확인
 docker images
 ```
+### Docker container 생성하고 실행하는 방법
+
+```bash
+# 1. 컨테이너 생성 및 백그라운드 실행
+docker run -dit final_2023040036:v1
+
+# 2. 실행 중인 컨테이너 확인
+docker ps
+
+# 3. 컨테이너에 접속 (CONTAINER_ID는 위에서 확인한 ID 사용)
+docker exec -it <CONTAINER_ID> /bin/bash
+
+# 4. 프로젝트 디렉토리로 이동
+/# cd ~/es-hangul
+
+# 5. 예제 코드 실행
+~/es-hangul# node index.js
+```
