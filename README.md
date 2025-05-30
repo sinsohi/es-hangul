@@ -44,3 +44,18 @@ docker exec -it <CONTAINER_ID> /bin/bash
 # 5. 예제 코드 실행
 ~/es-hangul# node index.js
 ```
+
+### 디렉토리 구조
+
+```
+/root/
+└── es-hangul/                  
+    ├── package.json            
+    ├── src/                    
+    ├── dist/                   # 컴파일된 JavaScript 파일
+    │   └── index.js           # 빌드된 라이브러리
+    ├── index.js               # 실행 예제 파일
+    └── README.md              
+```
+
+
